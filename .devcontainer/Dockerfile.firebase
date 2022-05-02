@@ -1,0 +1,13 @@
+ARG VARIANT="bullseye"
+FROM debian:${VARIANT}
+
+RUN apt update -y && apt upgrade -y
+
+RUN apt install -y npm openjdk-17-jdk-headless
+
+RUN npm install -g firebase-tools
+
+RUN useradd -m app -s /bin/bash
+USER app
+
+WORKDIR /home/app
