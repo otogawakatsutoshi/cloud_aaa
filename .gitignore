@@ -1,0 +1,11 @@
+go.sum
+
+output/*
+!/output/.gitignore
+
+sqlite3.db
+
+keys/*
+!/keys/.gitignore
+
+.DS_Store
